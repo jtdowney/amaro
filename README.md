@@ -9,6 +9,12 @@ Fernet and Branca token encryption for Gleam.
 gleam add amaro
 ```
 
+## Which to use
+
+Prefer Branca for new deployments. Choose Fernet only when you need to inter-operate with existing systems.
+
+Both libraries encrypt a `BitArray` payload, so encode your state into a `BitArray` before passing it to `encrypt`.
+
 ## Fernet
 
 [Fernet](https://github.com/fernet/spec) tokens use AES-128-CBC with HMAC-SHA256. Tokens are base64url-encoded.
